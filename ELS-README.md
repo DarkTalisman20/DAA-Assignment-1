@@ -145,6 +145,7 @@ For Email-Enron:
 | 18         | 41     |
 | 19         | 10     |
 | 20         | 6      |
+
 Time taken: 5991 milliseconds
 Number of cliques: 226859
 Size of the largest maximal clique: 20
