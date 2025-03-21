@@ -24,7 +24,7 @@ Download the dataset and place it into the project directory/folder.
 Compile the file and run it.
 
 ```bash
-  g++ ELS.c -o ELS.out
+  g++ ELS.cpp -o ELS.out
   ./ELS.out
 ```
 
@@ -35,7 +35,7 @@ Input the file name of the graph dataset in the terminal.
 ## Results
     We executed the C++ implementation of ELS with 3 datasets:
 
-| Dataset        | Nodes   | Vertices   |
+| Dataset        | Nodes   | Edges   |
 |---------------|---------|------------|
 | as-skitter    | 1,696,415 | 11,095,298 |
 | Email-Enron   | 36,692  | 367,662    |
