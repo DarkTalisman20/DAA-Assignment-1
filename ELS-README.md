@@ -23,9 +23,18 @@ Download the dataset and place it into the project directory/folder.
 
 Compile the file and run it.
 
+For Unix/Mac:
+
 ```bash
   g++ ELS.cpp -o ELS.out
   ./ELS.out
+```
+
+For Windows:
+
+```bash
+  g++ ELS.cpp -o ELS.exe
+  ./ELS.exe
 ```
 
 Input the file name of the graph dataset in the terminal.
