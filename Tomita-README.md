@@ -63,7 +63,7 @@ Input the file name of the graph dataset in the terminal.
 - **Total number of maximal cliques**: 37,322,355  
 - **Size of the largest maximal clique**: 67  
 
-![Clique Size Distribution](ELS-as-skitter-res.png)
+![Clique Size Distribution](as-skitter-res.png)
 
 *Example results for Email-Enron:*
 
@@ -71,7 +71,7 @@ Input the file name of the graph dataset in the terminal.
 - **Total number of maximal cliques**: 226,859  
 - **Size of the largest maximal clique**: 20  
 
-![Clique Size Distribution](ELS-Email-Enron-res.png)
+![Clique Size Distribution](Email-Enron-res.png)
 
 *Example results for Wiki-Vote:*
 
@@ -79,5 +79,5 @@ Input the file name of the graph dataset in the terminal.
 - **Total number of maximal cliques**: 459,002  
 - **Size of the largest maximal clique**: 17  
 
-![Clique Size Distribution](ELS-Wiki-Vote-res.png)
+![Clique Size Distribution](Wiki-Vote-res.png)
 ```
