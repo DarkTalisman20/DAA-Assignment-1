@@ -1,7 +1,7 @@
 
 # DAA Assignment 1   
 
-&nbsp;&nbsp;&nbsp;&nbsp;In this project we implement three algorithms for finding all the maximal cliques in an undirected graph in C. The algorithms are:
+&nbsp;&nbsp;&nbsp;&nbsp;In this project we implement three algorithms for finding all the maximal cliques in an undirected graph in C++. The algorithms are:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. The algorithm CLIQUE from pages 220-222 from the paper titled Arboricity and Subgraph Mining; by Norishige Chiba and Takao Nishizeki. (Link: https://www.cs.cornell.edu/courses/cs6241/2019sp/readings/Chiba-1985-arboricity.pdf).  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. The ELS Algorithm given in the paper titled Listing All Maximal Cliques in Sparse Graphs in Near-optimal Time by David Eppstein, Maarten Loffler, and Darren Strash. (Link: https://arxiv.org/abs/1006.5440).    
