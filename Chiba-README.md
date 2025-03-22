@@ -2,7 +2,7 @@
 # An implementation of Arboricity algorithm 
 &nbsp;&nbsp;&nbsp;&nbsp;We seek to implement the CLIQUE algorithm for Maximal Clique Enumeration Algorithm given in the paper Arboricity and Subgraph Listing by Norishige Chiba AND Takao Nishizeki.  
 &nbsp;&nbsp;&nbsp;&nbsp;The algorithm CLIQUE enumerates all maximal cliques in a graph with a time complexity of O(α(G)m) per clique and O(m) space, where α(G) is the graph's arboricity (a sparsity measure which is defined as the number of edge-disjoint forests into which a graph can be decomposed) and m is the number of edges. The algorithm uses Tsukiyama et al's Maximal Independent set algorithm and the strategy of edge searching of subgraph induced by neighbours of vertex under consideration.  
-&nbsp;&nbsp;&nbsp;&nbsp;In the algorithm above, "maximality test" checks whether the candidate of a new clique C’ =(C ∩ N(i))∪{i} is indeed a clique (i.e. maximal complete subgraph) of the graph Gi. The "lexico. test" checks whether C is the lexicographically largest clique of Gi-1 containing C ∩ N(i) (= Co), where i is argument of CLIQUE, and Gi is subgraph induced by vertices 1 to i and C is set of vertices to be expanded to form the clique.   
+&nbsp;&nbsp;&nbsp;&nbsp;In the algorithm above, "maximality test" checks whether the candidate of a new clique C’ =(C ∩ N(i))∪{i} is indeed a clique (i.e. maximal complete subgraph) of the graph Gi. The "lexico. test" checks whether C is the lexicographically largest clique of Gi-1 containing C ∩ N(i), where i is argument of CLIQUE, and Gi is subgraph induced by vertices 1 to i and C is set of vertices to be expanded to form the clique.   
 &nbsp;&nbsp;&nbsp;&nbsp;By leveraging vertex ordering (sorted by degree) and efficient pruning via lexicographical checks, the algorithm bounds per-clique operations to a cost proportional to the graph's density and edge count. The proof establishes this using inductive analysis, showing that the time for each recursive step UPDATE(i, C) is dominated by neighborhood intersections and degree sums, while space remains linear due to optimized global variables and disjoint set management. This approach balances theoretical optimality for sparse graphs (α(G) ≈ O(1)) with practical scalability, though it retains exponential worst-case complexity for dense graphs. The method prioritizes low-degree vertices and early elimination of non-maximal cliques, ensuring efficient traversal of the search space.  
 
 ## Run Locally
@@ -129,7 +129,7 @@ Time taken:
 Total number of cliques: 37,322,355
 The size of the largest maximal clique: 67
 
-![Clique Size Distribution](ELS-as-skitter-res.png)
+![Clique Size Distribution](as-skitter-res.png)
 
 For Email-Enron:
 
@@ -159,7 +159,7 @@ Time taken: 7082330 ms (~1.9 hours)
 Number of cliques: 226859
 Size of the largest maximal clique: 20
 
-![Clique Size Distribution](ELS-Email-Enron-res.png)
+![Clique Size Distribution](Email-Enron-res.png)
 
 
 For Wiki-Vote:
@@ -187,4 +187,4 @@ Time taken: 6026020 ms (~1.6 hours)
 Total number of cliques: 459,002
 Size of the largest maximal clique size: 17
 
-![Clique Size Distribution](ELS-Wiki-Vote-res.png)
+![Clique Size Distribution](Wiki-Vote-res.png)
