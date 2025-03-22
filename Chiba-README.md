@@ -42,7 +42,7 @@ Input the file name of the graph dataset in the terminal.
 
 
 ## Results
-    We executed the C++ implementation of ELS with 3 datasets:
+&nbsp;&nbsp;&nbsp;&nbsp;We executed the C++ implementation of ELS with 3 datasets:
 
 | Dataset        | Nodes   | Edges   |
 |---------------|---------|------------|
