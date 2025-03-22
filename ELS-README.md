@@ -1,10 +1,10 @@
 # An Implementation of ELS Algorithm
 &nbsp;&nbsp;&nbsp;&nbsp;We seek to implement ELS algorithm given in the paper "Listing All Maximal Cliques in Sparse Graphs in Near-optimal Time" by David Eppstein, Maarten Loffler, and Darren Stras from the Department of Computer Science, University of California, Irvine, USA. The language used in this implementation is C++, since we needed many STL containers and algorithms to implement the algorithm close to pseudo-code.  
 &nbsp;&nbsp;&nbsp;&nbsp;The ELS is a variation of Bron-Kerbosch Algorithm. The ELS paper described time complexity in terms of degeneracy (d, which is the smallest number such that every sub-graph contains a node of degree atmost d), the complexity being O(dn(3^(d/3))). Bron-Kerbosch algorithm is a recursive algorithm which, as arguments take three disjoint sets of vertices, P (the set of vertices which will be considered for inclusion in the clique), R (the clique found so far), and X (the set of vertices which are excluded in maximal clique).   
-&nbsp;&nbsp;&nbsp;&nbsp;The Bron-Kerbosch Algorithm recursion terminates when both P and X are empty, printing the maximal clique R. Else, the algorithm iterates over all the vertices v in P, recursively calling Bron-Kerbosch on arguments: P as P ∩ neighbours(v), R as R ∪{v} and X as X ∩ neighbours(v). When the recursive call returns, we mpve v from P to X.  
+&nbsp;&nbsp;&nbsp;&nbsp;The Bron-Kerbosch Algorithm recursion terminates when both P and X are empty, printing the maximal clique R. Else, the algorithm iterates over all the vertices v in P, recursively calling Bron-Kerbosch on arguments: P as P ∩ neighbours(v), R as R ∪{v} and X as X ∩ neighbours(v). When the recursive call returns, we move v from P to X.  
 &nbsp;&nbsp;&nbsp;&nbsp;The ELS modifies the Bron-Kerbosch Algorithm, in two basic ways.  
 &nbsp;&nbsp;&nbsp;&nbsp;The first modification is to begin with a degeneracy ordering of vertices, which can be obtained by a greedy algorithm of selecting and then removing vertex with minimum degree till the graph is empty. Then, we iterate over all the vertices in the degeneracy ordering.  
-&nbsp;&nbsp;&nbsp;&nbsp;The second modification is that for each vertex vi, we take the set P as all the neighbours of vi, which are after vi in degeneracy ordering, and X as all the neighbours of vi, which are before vi in degeneracy ordering, and R as {vi}. Here, instead of calling Bron-Kerbosch basic algorithm, we call a variation called Bron-Kerbosch Pivot, which has same arguments as Bron-Kerbosch, but when P ∪ X is not empty, we choose a pivot in the same way as Tomita chose, that is the one with largest value of |P ∩ neighbours (u)|. After this, for each vertex v in  P\neighbours(u), we recursively call the Bron-Kerbosch Pivot with the arguments: P as P ∩ neighbours(v), R as R ∪{v} and X as X ∩ neighbours(v). When the recursive call returns, we move v from P to X.
+&nbsp;&nbsp;&nbsp;&nbsp;The second modification is that for each vertex vi, we take the set P as all the neighbours of vi, which are after vi in degeneracy ordering, and X as all the neighbours of vi, which are before vi in degeneracy ordering, and R as {vi}. Here, instead of calling Bron-Kerbosch basic algorithm, we call a variation called Bron-Kerbosch Pivot, which has same arguments as Bron-Kerbosch with R = {vi}, but when P ∪ X is not empty, we choose a pivot in the same way as Tomita chose, that is the one with largest value of |P ∩ neighbours (u)| from P ∪ X. After this, for each vertex v in  P\neighbours(u), we recursively call the Bron-Kerbosch Pivot with the arguments: P as P ∩ neighbours(v), R as R ∪{v} and X as X ∩ neighbours(v). When the recursive call returns, we move v from P to X.
 ## Run Locally
 
 Download the project with the code file
@@ -129,7 +129,7 @@ Time taken: 3,410,914 ms (~56.85 minutes)
 Total number of cliques: 37,322,355
 The size of the largest maximal clique: 67
 
-![Clique Size Distribution](ELS-as-skitter-res.png)
+![Clique Size Distribution](as-skitter-res.png)
 
 For Email-Enron:
 
@@ -155,11 +155,11 @@ For Email-Enron:
 | 19         | 10     |
 | 20         | 6      |
 
-Time taken: 5991 milliseconds
+Time taken: 5991 milliseconds (~6 seconds)
 Number of cliques: 226859
 Size of the largest maximal clique: 20
 
-![Clique Size Distribution](ELS-Email-Enron-res.png)
+![Clique Size Distribution](Email-Enron-res.png)
 
 
 For Wiki-Vote:
@@ -187,4 +187,4 @@ Time taken: 6,133 ms (~6.13 seconds)
 Total number of cliques: 459,002
 Size of the largest maximal clique size: 17
 
-![Clique Size Distribution](ELS-Wiki-Vote-res.png)
+![Clique Size Distribution](Wiki-Vote-res.png)
