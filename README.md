@@ -57,4 +57,4 @@ For Windows:
 
 Input the file name of the graph dataset in the terminal.
 
-<file-name> can be Tomita, or ELS, or Chiba.
+ <file-name> can be Tomita, or ELS, or Chiba.
