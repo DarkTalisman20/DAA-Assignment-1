@@ -31,9 +31,18 @@ Download the dataset and place it into the project directory/folder.
 
 Compile the file and run it.
 
+For Unix/Mac:
+
 ```bash
-g++ 21march.cpp -o Tomita
-./Tomita.exe dataset_name
+  g++ 21march.cpp -o Tomita.out
+  ./Tomita.out
+```
+
+For Windows:
+
+```bash
+  g++ 21march.cpp -o Tomita.exe
+  ./Tomita.exe
 ```
 
 Input the file name of the graph dataset in the terminal.
