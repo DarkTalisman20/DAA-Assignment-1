@@ -34,14 +34,14 @@ Compile the file and run it.
 For Unix/Mac:
 
 ```bash
-  g++ 21march.cpp -o Tomita.out
+  g++ Tomita.cpp -o Tomita.out
   ./Tomita.out
 ```
 
 For Windows:
 
 ```bash
-  g++ 21march.cpp -o Tomita.exe
+  g++ Tomita.cpp -o Tomita.exe
   ./Tomita.exe
 ```
 
