@@ -23,9 +23,18 @@ Download the dataset and place it into the project directory/folder.
 
 Compile the file and run it.
 
+For Unix/Mac:
+
 ```bash
   g++ chiba.cpp -o chiba.out
   ./chiba.out
+```
+
+For Windows:
+
+```bash
+  g++ chiba.cpp -o chiba.exe
+  ./chiba.exe
 ```
 
 Input the file name of the graph dataset in the terminal.
