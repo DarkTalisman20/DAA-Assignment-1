@@ -12,7 +12,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Email-Enron (Link: https://snap.stanford.edu/data/email-Enron.html)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Wiki-Vote (Link: https://snap.stanford.edu/data/wiki-Vote.html)    
 
-&nbsp;&nbsp;&nbsp;&nbsp;We treated these datasets as undirected graphs and applied these algorithms. The results are shown in the algorithm-wise markdowns, and the report.
+&nbsp;&nbsp;&nbsp;&nbsp;We treated these datasets as undirected graphs and applied these algorithms. The input is taken from a text file with some optional text, including number of vertices, followed by edges, and the rest of the lines denoting a pair of vertices with an edge between them. We store the graphs in adjacency list format. The results are shown in the algorithm-wise markdowns, and the report.
 &nbsp;&nbsp;&nbsp;&nbsp; Github Repository: https://github.com/DarkTalisman20/DAA-Assignment-1
 &nbsp;&nbsp;&nbsp;&nbsp; Webpage Link: https://darktalisman20.github.io/DAA-Assignment-1/
 ## Contributions
@@ -22,6 +22,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;2. ELS Implementation: Amritansh  
 &nbsp;&nbsp;&nbsp;&nbsp;3. Tomita Implementation: Paras Puneet Singh  
 &nbsp;&nbsp;&nbsp;&nbsp;4. Report: Chhavi Malhotra  
+&nbsp;&nbsp;&nbsp;&nbsp;5. Webpage: Saarthek Raj
 
 ## Run Locally
 
@@ -55,6 +56,11 @@ For Windows:
   ./<file-name>.exe
 ```
 
+For any operating system, after running the executable file, input the dataset-name.  
+Example for Wiki-Vote we input:  
+```bash
+  Wiki-Vote.txt
+```
 Input the file name of the graph dataset in the terminal.
 
- file-name can be Tomita, or ELS, or Chiba.
+file-name can be Tomita, or ELS, or Chiba.
