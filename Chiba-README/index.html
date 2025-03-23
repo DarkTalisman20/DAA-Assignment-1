@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Page 1 - DAA Assignment 1</title>
+        <title>Chiba - DAA Assignment 1</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -38,10 +38,13 @@
                                 <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Page 1</a>
+                                <a href="./" class="nav-link active" aria-current="page">Chiba</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../ELS-README/" class="nav-link">Page 2</a>
+                                <a href="../ELS-README/" class="nav-link">ELS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Tomita-README/" class="nav-link">Tomita</a>
                             </li>
                         </ul>
 
@@ -86,6 +89,10 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#an-implementation-of-arboricity-algorithm" class="nav-link">An implementation of Arboricity algorithm</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#run-locally" class="nav-link">Run Locally</a>
               <ul class="nav flex-column">
               </ul>
@@ -103,9 +110,10 @@
 
 <h1 id="daa-assignment-1">DAA-Assignment-1</h1>
 <h1 id="an-implementation-of-arboricity-algorithm">An implementation of Arboricity algorithm</h1>
+<h2 id="introduction">Introduction</h2>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;We seek to implement the CLIQUE algorithm for Maximal Clique Enumeration Algorithm given in the paper Arboricity and Subgraph Listing by Norishige Chiba AND Takao Nishizeki.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;The algorithm CLIQUE enumerates all maximal cliques in a graph with a time complexity of O(α(G)m) per clique and O(m) space, where α(G) is the graph's arboricity (a sparsity measure which is defined as the number of edge-disjoint forests into which a graph can be decomposed) and m is the number of edges. The algorithm uses Tsukiyama et al's Maximal Independent set algorithm and the strategy of edge searching of subgraph induced by neighbours of vertex under consideration.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;In the algorithm above, "maximality test" checks whether the candidate of a new clique C’ =(C ∩ N(i))∪{i} is indeed a clique (i.e. maximal complete subgraph) of the graph Gi. The "lexico. test" checks whether C is the lexicographically largest clique of Gi-1 containing C ∩ N(i) (= Co), where i is argument of CLIQUE, and Gi is subgraph induced by vertices 1 to i and C is set of vertices to be expanded to form the clique. <br />
+&nbsp;&nbsp;&nbsp;&nbsp;In the algorithm above, "maximality test" checks whether the candidate of a new clique C’ =(C ∩ N(i))∪{i} is indeed a clique (i.e. maximal complete subgraph) of the graph Gi. The "lexico. test" checks whether C is the lexicographically largest clique of Gi-1 containing C ∩ N(i), where i is argument of CLIQUE, and Gi is subgraph induced by vertices 1 to i and C is set of vertices to be expanded to form the clique. <br />
 &nbsp;&nbsp;&nbsp;&nbsp;By leveraging vertex ordering (sorted by degree) and efficient pruning via lexicographical checks, the algorithm bounds per-clique operations to a cost proportional to the graph's density and edge count. The proof establishes this using inductive analysis, showing that the time for each recursive step UPDATE(i, C) is dominated by neighborhood intersections and degree sums, while space remains linear due to optimized global variables and disjoint set management. This approach balances theoretical optimality for sparse graphs (α(G) ≈ O(1)) with practical scalability, though it retains exponential worst-case complexity for dense graphs. The method prioritizes low-degree vertices and early elimination of non-maximal cliques, ensuring efficient traversal of the search space.  </p>
 <h2 id="run-locally">Run Locally</h2>
 <p>Download the project with the code file</p>
@@ -116,13 +124,17 @@
 </code></pre>
 <p>Download the dataset and place it into the project directory/folder.</p>
 <p>Compile the file and run it.</p>
+<p>For Unix/Mac:</p>
 <pre><code class="language-bash">  g++ chiba.cpp -o chiba.out
   ./chiba.out
 </code></pre>
+<p>For Windows:</p>
+<pre><code class="language-bash">  g++ chiba.cpp -o chiba.exe
+  ./chiba.exe
+</code></pre>
 <p>Input the file name of the graph dataset in the terminal.</p>
 <h2 id="results">Results</h2>
-<pre><code>We executed the C++ implementation of ELS with 3 datasets:
-</code></pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;The code was executed on a Macbook Air 1, with 8 GB RAM and the execution time may differ for different devices. We executed the C++ implementation of ELS with 3 datasets:</p>
 <table>
 <thead>
 <tr>
@@ -151,284 +163,7 @@
 </table>
 <p>We present the number and count of Maximal Cliques, Size of maximal clique and time taken to execute for these datasets.</p>
 <p>For as-skitter:</p>
-<table>
-<thead>
-<tr>
-<th>Clique Size</th>
-<th>Count</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2</td>
-<td>2,319,807</td>
-</tr>
-<tr>
-<td>3</td>
-<td>3,171,609</td>
-</tr>
-<tr>
-<td>4</td>
-<td>1,823,321</td>
-</tr>
-<tr>
-<td>5</td>
-<td>939,336</td>
-</tr>
-<tr>
-<td>6</td>
-<td>684,873</td>
-</tr>
-<tr>
-<td>7</td>
-<td>598,284</td>
-</tr>
-<tr>
-<td>8</td>
-<td>588,889</td>
-</tr>
-<tr>
-<td>9</td>
-<td>608,937</td>
-</tr>
-<tr>
-<td>10</td>
-<td>665,661</td>
-</tr>
-<tr>
-<td>11</td>
-<td>728,098</td>
-</tr>
-<tr>
-<td>12</td>
-<td>798,073</td>
-</tr>
-<tr>
-<td>13</td>
-<td>877,282</td>
-</tr>
-<tr>
-<td>14</td>
-<td>945,194</td>
-</tr>
-<tr>
-<td>15</td>
-<td>980,831</td>
-</tr>
-<tr>
-<td>16</td>
-<td>939,987</td>
-</tr>
-<tr>
-<td>17</td>
-<td>839,330</td>
-</tr>
-<tr>
-<td>18</td>
-<td>729,601</td>
-</tr>
-<tr>
-<td>19</td>
-<td>639,413</td>
-</tr>
-<tr>
-<td>20</td>
-<td>600,192</td>
-</tr>
-<tr>
-<td>21</td>
-<td>611,976</td>
-</tr>
-<tr>
-<td>22</td>
-<td>640,890</td>
-</tr>
-<tr>
-<td>23</td>
-<td>673,924</td>
-</tr>
-<tr>
-<td>24</td>
-<td>706,753</td>
-</tr>
-<tr>
-<td>25</td>
-<td>753,633</td>
-</tr>
-<tr>
-<td>26</td>
-<td>818,353</td>
-</tr>
-<tr>
-<td>27</td>
-<td>892,719</td>
-</tr>
-<tr>
-<td>28</td>
-<td>955,212</td>
-</tr>
-<tr>
-<td>29</td>
-<td>999,860</td>
-</tr>
-<tr>
-<td>30</td>
-<td>1,034,106</td>
-</tr>
-<tr>
-<td>31</td>
-<td>1,055,653</td>
-</tr>
-<tr>
-<td>32</td>
-<td>1,017,560</td>
-</tr>
-<tr>
-<td>33</td>
-<td>946,717</td>
-</tr>
-<tr>
-<td>34</td>
-<td>878,552</td>
-</tr>
-<tr>
-<td>35</td>
-<td>809,485</td>
-</tr>
-<tr>
-<td>36</td>
-<td>744,634</td>
-</tr>
-<tr>
-<td>37</td>
-<td>663,650</td>
-</tr>
-<tr>
-<td>38</td>
-<td>583,922</td>
-</tr>
-<tr>
-<td>39</td>
-<td>520,239</td>
-</tr>
-<tr>
-<td>40</td>
-<td>474,301</td>
-</tr>
-<tr>
-<td>41</td>
-<td>420,796</td>
-</tr>
-<tr>
-<td>42</td>
-<td>367,879</td>
-</tr>
-<tr>
-<td>43</td>
-<td>321,829</td>
-</tr>
-<tr>
-<td>44</td>
-<td>275,995</td>
-</tr>
-<tr>
-<td>45</td>
-<td>222,461</td>
-</tr>
-<tr>
-<td>46</td>
-<td>158,352</td>
-</tr>
-<tr>
-<td>47</td>
-<td>99,522</td>
-</tr>
-<tr>
-<td>48</td>
-<td>62,437</td>
-</tr>
-<tr>
-<td>49</td>
-<td>39,822</td>
-</tr>
-<tr>
-<td>50</td>
-<td>30,011</td>
-</tr>
-<tr>
-<td>51</td>
-<td>25,637</td>
-</tr>
-<tr>
-<td>52</td>
-<td>17,707</td>
-</tr>
-<tr>
-<td>53</td>
-<td>9,514</td>
-</tr>
-<tr>
-<td>54</td>
-<td>3,737</td>
-</tr>
-<tr>
-<td>55</td>
-<td>2,042</td>
-</tr>
-<tr>
-<td>56</td>
-<td>1,080</td>
-</tr>
-<tr>
-<td>57</td>
-<td>546</td>
-</tr>
-<tr>
-<td>58</td>
-<td>449</td>
-</tr>
-<tr>
-<td>59</td>
-<td>447</td>
-</tr>
-<tr>
-<td>60</td>
-<td>405</td>
-</tr>
-<tr>
-<td>61</td>
-<td>283</td>
-</tr>
-<tr>
-<td>62</td>
-<td>242</td>
-</tr>
-<tr>
-<td>63</td>
-<td>146</td>
-</tr>
-<tr>
-<td>64</td>
-<td>84</td>
-</tr>
-<tr>
-<td>65</td>
-<td>49</td>
-</tr>
-<tr>
-<td>66</td>
-<td>22</td>
-</tr>
-<tr>
-<td>67</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
-<p>Time taken: 
-Total number of cliques: 37,322,355
-The size of the largest maximal clique: 67</p>
-<p><img alt="Clique Size Distribution" src="../ELS-as-skitter-res.png" /></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Since the algorithm took approximately 3.8 hours on Email-Enron and 57.35 minutes on Wiki-Vote, we estimate that it would take at least 50 hours on the as-skitter dataset, which contains 1,696,415 nodes and 11,095,298 edges. However, due to system constraints, we were unable to run the algorithm on as-skitter. Additionally, based on other algorithms, as-skitter has 37,322,355 cliques, with the largest maximal clique having a size of 67, which again shows that it would takes a lot of computational cost to give the output.  </p>
 <p>For Email-Enron:</p>
 <table>
 <thead>
@@ -516,10 +251,10 @@ The size of the largest maximal clique: 67</p>
 </tr>
 </tbody>
 </table>
-<p>Time taken: 
+<p>Time taken: 7082330 ms (~1.9 hours)
 Number of cliques: 226859
 Size of the largest maximal clique: 20</p>
-<p><img alt="Clique Size Distribution" src="../ELS-Email-Enron-res.png" /></p>
+<p><img alt="Clique Size Distribution" src="../Email-Enron-res.png" /></p>
 <p>For Wiki-Vote:</p>
 <table>
 <thead>
@@ -595,10 +330,10 @@ Size of the largest maximal clique: 20</p>
 </tr>
 </tbody>
 </table>
-<p>Time taken: 
+<p>Time taken: 3441290 ms (~57.35 seconds)
 Total number of cliques: 459,002
 Size of the largest maximal clique size: 17</p>
-<p><img alt="Clique Size Distribution" src="../ELS-Wiki-Vote-res.png" /></p></div>
+<p><img alt="Clique Size Distribution" src="../Wiki-Vote-res.png" /></p></div>
             </div>
         </div>
 
