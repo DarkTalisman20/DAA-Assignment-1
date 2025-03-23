@@ -22,7 +22,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;2. ELS Implementation: Amritansh  
 &nbsp;&nbsp;&nbsp;&nbsp;3. Tomita Implementation: Paras Puneet Singh  
 &nbsp;&nbsp;&nbsp;&nbsp;4. Report: Chhavi Malhotra  
-&nbsp;&nbsp;&nbsp;&nbsp;5. Webpage: Saarthek Raj
 
 ## Run Locally
 
@@ -63,4 +62,7 @@ Example for Wiki-Vote we input:
 ```
 Input the file name of the graph dataset in the terminal.
 
-file-name can be Tomita, or ELS, or Chiba.
+file-name can be Tomita, or ELS, or Chiba.  
+
+&nbsp;&nbsp;&nbsp;&nbsp; Webpage Link: [https://darktalisman20.github.io/DAA-Assignment-1/](https://darktalisman20.github.io/DAA-Assignment-1/)  
+&nbsp;&nbsp;&nbsp;&nbsp; Github page: [https://github.com/DarkTalisman20/DAA-Assignment-1](https://github.com/DarkTalisman20/DAA-Assignment-1)
