@@ -7,31 +7,32 @@
 
 ## Run Locally
 
-Download the project with the code file from the submission.
-
-Go to the project directory
-
-```bash
-  cd DAA-Assignment-1
-```
-
+1. Ensure that the .txt files of the datasets are in the same folder/directory as the code, and the terminal is also on the same folder/directory.
 Download the dataset and place it into the project directory/folder.
 
-Compile the file and run it.
+2. Compile the file and run it.
 
 For Unix/Mac:
 
 ```bash
   g++ chiba.cpp -o chiba.out
-  ./chiba.out <file-name>.txt
+  ./chiba.out <dataset>.txt
 ```
 
 For Windows:
 
 ```bash
   g++ chiba.cpp -o chiba.exe
-  ./chiba.exe <file-name>.txt
+  ./chiba.exe <dataset>.txt
 ```
+
+dataset can be wiki-Vote or as-skitter or email-Enron.  
+3. After the program executes properly you will get the following outputs on the terminal - 
+"code execution completed!
+results are available in output-chiba.txt of the same directory"
+4. Check the output-chiba.txt file to see the results of the execution.
+Note - For seeing results of next execution, please close and open the output-chiba.txt file again
+
 
 ## Results
 &nbsp;&nbsp;&nbsp;&nbsp;The code was executed on a Macbook Air 1, with 8 GB RAM and the execution time may differ for different devices. We executed the C++ implementation of ELS with 3 datasets:
