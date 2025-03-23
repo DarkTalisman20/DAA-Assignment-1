@@ -7,37 +7,29 @@
 &nbsp;&nbsp;&nbsp;&nbsp;The second modification is that for each vertex vi, we take the set P as all the neighbours of vi, which are after vi in degeneracy ordering, and X as all the neighbours of vi, which are before vi in degeneracy ordering, and R as {vi}. Here, instead of calling Bron-Kerbosch basic algorithm, we call a variation called Bron-Kerbosch Pivot, which has same arguments as Bron-Kerbosch with R = {vi}, but when P ∪ X is not empty, we choose a pivot in the same way as Tomita chose, that is the one with largest value of |P ∩ neighbours (u)| from P ∪ X. After this, for each vertex v in  P\neighbours(u), we recursively call the Bron-Kerbosch Pivot with the arguments: P as P ∩ neighbours(v), R as R ∪{v} and X as X ∩ neighbours(v). When the recursive call returns, we move v from P to X.
 ## Run Locally
 
-Download the project with the code file
+1. Ensure that the .txt files of the datasets are in the same folder/directory as the code, and the terminal is also on the same folder/directory.  
 
-```bash
-  git clone https://github.com/DarkTalisman20/DAA-Assignment-1.git
-```
+2. Compile the file and run it.  
 
-Go to the project directory
-
-```bash
-  cd DAA-Assignment-1
-```
-
-Download the dataset and place it into the project directory/folder.
-
-Compile the file and run it.
-
-For Unix/Mac:
+For Unix/Mac:  
 
 ```bash
   g++ els.cpp -o els.out
-  ./els.out
+  ./els.out <dataset>.txt
 ```
 
-For Windows:
+For Windows:  
 
 ```bash
   g++ els.cpp -o els.exe
-  ./els.exe
+  ./els.exe <dataset>.txt
 ```
-
-Input the file name of the graph dataset in the terminal.
+dataset can be wiki-Vote or as-skitter or email-Enron.  
+3. After the program executes properly you will get the following outputs on the terminal -  
+"code execution completed!  
+results are available in output-els.txt of the same directory"  
+4. Check the output-els.txt file to see the results of the execution.  
+Note - for seeing results of next execution, please close and open the output-els.txt file again.  
 
 
 
