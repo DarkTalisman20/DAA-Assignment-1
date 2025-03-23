@@ -1,4 +1,3 @@
-```md
 # An Implementation of Tomita Algorithm
 &nbsp;&nbsp;&nbsp;&nbsp;We seek to implement the maximal clique enumeration algorithm based on Tomita et al.'s approach. The implementation uses C++ to closely mimic the pseudo-code described by Tomita and collaborators, leveraging STL containers and algorithms for efficiency.  
 &nbsp;&nbsp;&nbsp;&nbsp;This algorithm is a refined variant of the Bron-Kerbosch recursive method, enhanced with a pivot selection strategy. In this method, three disjoint sets of vertices are maintained:
@@ -15,37 +14,25 @@
 
 ## Run Locally
 
-Download the project with the code file
-
-```bash
-git clone https://github.com/DarkTalisman20/DAA-Assignment-1.git
-```
-
-Go to the project directory
-
-```bash
-cd DAA-Assignment-1
-```
-
-Download the dataset and place it into the project directory/folder.
-
-Compile the file and run it.
+ 1. Ensure that the .txt files of the datasets are in the same folder/directory as the code, and the terminal is also on the same folder/directory.  
+ 2. Compile the file and run it.  
 
 For Unix/Mac:
 
 ```bash
   g++ tomita.cpp -o tomita.out
-  ./tomita.out
+  ./tomita.out <dataset>.txt
 ```
 
 For Windows:
 
 ```bash
   g++ tomita.cpp -o tomita.exe
-  ./tomita.exe
+  ./tomita.exe  <dataset>.txt
 ```
 
-Input the file name of the graph dataset in the terminal.
+<dataset> can be email-Enron or wiki-Vote or as-skitter.  
+3. The output shows the total number of nodes, maximum clique size, number of maximal cliques, their sizes and counts, and the execution time.  
 
 ## Results
 
