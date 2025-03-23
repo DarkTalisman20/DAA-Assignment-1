@@ -117,9 +117,9 @@ For as-skitter:
 | 66         | 22        |
 | 67         | 4         |
 
-- **Time taken**: Approximately 8 hours
+- **Time taken**: Approximately 8 hours  
 - **Total number of maximal cliques**: 37,322,355  
-- **Size of the largest maximal clique**: 67
+- **Size of the largest maximal clique**: 67  
 
 ![Clique Size Distribution](as-skitter-res.png)
 
@@ -176,8 +176,8 @@ For as-skitter:
 | 16         | 208    |
 | 17         | 23     |
 
-- **Time taken**: 4 seconds
-- **Total number of maximal cliques**: 459,002  
+- **Time taken**: 4 seconds  
+- **Total number of maximal cliques**: 459,002    
 - **Size of the largest maximal clique**: 17  
 
 ![Clique Size Distribution](Wiki-Vote-res.png)
