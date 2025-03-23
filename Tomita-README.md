@@ -49,7 +49,7 @@ Input the file name of the graph dataset in the terminal.
 
 ## Results
 
-*The following results are based on executing the C++ implementation of the Tomita-based maximal clique algorithm on various datasets. The output includes the number of maximal cliques found, the size of the largest clique, and the execution time.*
+*The following results are based on executing the C++ implementation of the Tomita-based maximal clique algorithm on various datasets. The code was executed on a Macbook Air 1, with 8 GB RAM and the execution time may differ for different devices. The output includes the number of maximal cliques found, the size of the largest clique, and the execution time.*
 
 | Dataset       | Nodes     | Edges      |
 |---------------|-----------|------------|
