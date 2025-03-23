@@ -89,10 +89,6 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#an-implementation-of-arboricity-algorithm" class="nav-link">An implementation of Arboricity algorithm</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#introduction" class="nav-link">Introduction</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-bs-level="2"><a href="#run-locally" class="nav-link">Run Locally</a>
               <ul class="nav flex-column">
               </ul>
@@ -110,29 +106,34 @@
 
 <h1 id="daa-assignment-1">DAA-Assignment-1</h1>
 <h1 id="an-implementation-of-arboricity-algorithm">An implementation of Arboricity algorithm</h1>
-<h2 id="introduction">Introduction</h2>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;We seek to implement the CLIQUE algorithm for Maximal Clique Enumeration Algorithm given in the paper Arboricity and Subgraph Listing by Norishige Chiba AND Takao Nishizeki.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;The algorithm CLIQUE enumerates all maximal cliques in a graph with a time complexity of O(α(G)m) per clique and O(m) space, where α(G) is the graph's arboricity (a sparsity measure which is defined as the number of edge-disjoint forests into which a graph can be decomposed) and m is the number of edges. The algorithm uses Tsukiyama et al's Maximal Independent set algorithm and the strategy of edge searching of subgraph induced by neighbours of vertex under consideration.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;In the algorithm above, "maximality test" checks whether the candidate of a new clique C’ =(C ∩ N(i))∪{i} is indeed a clique (i.e. maximal complete subgraph) of the graph Gi. The "lexico. test" checks whether C is the lexicographically largest clique of Gi-1 containing C ∩ N(i), where i is argument of CLIQUE, and Gi is subgraph induced by vertices 1 to i and C is set of vertices to be expanded to form the clique. <br />
 &nbsp;&nbsp;&nbsp;&nbsp;By leveraging vertex ordering (sorted by degree) and efficient pruning via lexicographical checks, the algorithm bounds per-clique operations to a cost proportional to the graph's density and edge count. The proof establishes this using inductive analysis, showing that the time for each recursive step UPDATE(i, C) is dominated by neighborhood intersections and degree sums, while space remains linear due to optimized global variables and disjoint set management. This approach balances theoretical optimality for sparse graphs (α(G) ≈ O(1)) with practical scalability, though it retains exponential worst-case complexity for dense graphs. The method prioritizes low-degree vertices and early elimination of non-maximal cliques, ensuring efficient traversal of the search space.  </p>
 <h2 id="run-locally">Run Locally</h2>
-<p>Download the project with the code file</p>
-<pre><code class="language-bash">  git clone https://github.com/DarkTalisman20/DAA-Assignment-1.git
-</code></pre>
-<p>Go to the project directory</p>
-<pre><code class="language-bash">  cd DAA-Assignment-1
-</code></pre>
-<p>Download the dataset and place it into the project directory/folder.</p>
+<ol>
+<li>
+<p>Ensure that the .txt files of the datasets are in the same folder/directory as the code, and the terminal is also on the same folder/directory.
+Download the dataset and place it into the project directory/folder.</p>
+</li>
+<li>
 <p>Compile the file and run it.</p>
+</li>
+</ol>
 <p>For Unix/Mac:</p>
 <pre><code class="language-bash">  g++ chiba.cpp -o chiba.out
-  ./chiba.out
+  ./chiba.out &lt;dataset&gt;.txt
 </code></pre>
 <p>For Windows:</p>
 <pre><code class="language-bash">  g++ chiba.cpp -o chiba.exe
-  ./chiba.exe
+  ./chiba.exe &lt;dataset&gt;.txt
 </code></pre>
-<p>Input the file name of the graph dataset in the terminal.</p>
+<p>dataset can be wiki-Vote or as-skitter or email-Enron.<br />
+3. After the program executes properly you will get the following outputs on the terminal - 
+"code execution completed!
+results are available in output-chiba.txt of the same directory"<br />
+4. Check the output-chiba.txt file to see the results of the execution.<br />
+Note - For seeing results of next execution, please close and open the output-chiba.txt file again.  </p>
 <h2 id="results">Results</h2>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;The code was executed on a Macbook Air 1, with 8 GB RAM and the execution time may differ for different devices. We executed the C++ implementation of ELS with 3 datasets:</p>
 <table>
@@ -251,9 +252,9 @@
 </tr>
 </tbody>
 </table>
-<p>Time taken: 7082330 ms (~1.9 hours)
-Number of cliques: 226859
-Size of the largest maximal clique: 20</p>
+<p>Time taken: 7082330 ms (~1.9 hours)<br />
+Number of cliques: 226859<br />
+Size of the largest maximal clique: 20  </p>
 <p><img alt="Clique Size Distribution" src="../Email-Enron-res.png" /></p>
 <p>For Wiki-Vote:</p>
 <table>
@@ -330,9 +331,9 @@ Size of the largest maximal clique: 20</p>
 </tr>
 </tbody>
 </table>
-<p>Time taken: 3441290 ms (~57.35 seconds)
-Total number of cliques: 459,002
-Size of the largest maximal clique size: 17</p>
+<p>Time taken: 3441290 ms (~57.35 seconds)<br />
+Total number of cliques: 459,002<br />
+Size of the largest maximal clique size: 17  </p>
 <p><img alt="Clique Size Distribution" src="../Wiki-Vote-res.png" /></p></div>
             </div>
         </div>

@@ -84,10 +84,6 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#an-implementation-of-els-algorithm" class="nav-link">An Implementation of ELS Algorithm</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#introduction" class="nav-link">Introduction</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-bs-level="2"><a href="#run-locally" class="nav-link">Run Locally</a>
               <ul class="nav flex-column">
               </ul>
@@ -104,7 +100,6 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="an-implementation-of-els-algorithm">An Implementation of ELS Algorithm</h1>
-<h2 id="introduction">Introduction</h2>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;We seek to implement ELS algorithm given in the paper "Listing All Maximal Cliques in Sparse Graphs in Near-optimal Time" by David Eppstein, Maarten Loffler, and Darren Stras from the Department of Computer Science, University of California, Irvine, USA. The language used in this implementation is C++, since we needed many STL containers and algorithms to implement the algorithm close to pseudo-code.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;The ELS is a variation of Bron-Kerbosch Algorithm. The ELS paper described time complexity in terms of degeneracy (d, which is the smallest number such that every sub-graph contains a node of degree atmost d), the complexity being O(dn(3^(d/3))). Bron-Kerbosch algorithm is a recursive algorithm which, as arguments take three disjoint sets of vertices, P (the set of vertices which will be considered for inclusion in the clique), R (the clique found so far), and X (the set of vertices which are excluded in maximal clique). <br />
 &nbsp;&nbsp;&nbsp;&nbsp;The Bron-Kerbosch Algorithm recursion terminates when both P and X are empty, printing the maximal clique R. Else, the algorithm iterates over all the vertices v in P, recursively calling Bron-Kerbosch on arguments: P as P ∩ neighbours(v), R as R ∪{v} and X as X ∩ neighbours(v). When the recursive call returns, we move v from P to X.<br />
@@ -112,23 +107,28 @@
 &nbsp;&nbsp;&nbsp;&nbsp;The first modification is to begin with a degeneracy ordering of vertices, which can be obtained by a greedy algorithm of selecting and then removing vertex with minimum degree till the graph is empty. Then, we iterate over all the vertices in the degeneracy ordering.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;The second modification is that for each vertex vi, we take the set P as all the neighbours of vi, which are after vi in degeneracy ordering, and X as all the neighbours of vi, which are before vi in degeneracy ordering, and R as {vi}. Here, instead of calling Bron-Kerbosch basic algorithm, we call a variation called Bron-Kerbosch Pivot, which has same arguments as Bron-Kerbosch with R = {vi}, but when P ∪ X is not empty, we choose a pivot in the same way as Tomita chose, that is the one with largest value of |P ∩ neighbours (u)| from P ∪ X. After this, for each vertex v in  P\neighbours(u), we recursively call the Bron-Kerbosch Pivot with the arguments: P as P ∩ neighbours(v), R as R ∪{v} and X as X ∩ neighbours(v). When the recursive call returns, we move v from P to X.</p>
 <h2 id="run-locally">Run Locally</h2>
-<p>Download the project with the code file</p>
-<pre><code class="language-bash">  git clone https://github.com/DarkTalisman20/DAA-Assignment-1.git
-</code></pre>
-<p>Go to the project directory</p>
-<pre><code class="language-bash">  cd DAA-Assignment-1
-</code></pre>
-<p>Download the dataset and place it into the project directory/folder.</p>
-<p>Compile the file and run it.</p>
-<p>For Unix/Mac:</p>
+<ol>
+<li>
+<p>Ensure that the .txt files of the datasets are in the same folder/directory as the code, and the terminal is also on the same folder/directory.  </p>
+</li>
+<li>
+<p>Compile the file and run it.  </p>
+</li>
+</ol>
+<p>For Unix/Mac:  </p>
 <pre><code class="language-bash">  g++ els.cpp -o els.out
-  ./els.out
+  ./els.out &lt;dataset&gt;.txt
 </code></pre>
-<p>For Windows:</p>
+<p>For Windows:  </p>
 <pre><code class="language-bash">  g++ els.cpp -o els.exe
-  ./els.exe
+  ./els.exe &lt;dataset&gt;.txt
 </code></pre>
-<p>Input the file name of the graph dataset in the terminal.</p>
+<p>dataset can be wiki-Vote or as-skitter or email-Enron.<br />
+3. After the program executes properly you will get the following outputs on the terminal -<br />
+"code execution completed!<br />
+results are available in output-els.txt of the same directory"<br />
+4. Check the output-els.txt file to see the results of the execution.<br />
+Note - for seeing results of next execution, please close and open the output-els.txt file again.  </p>
 <h2 id="results">Results</h2>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;The code was executed on a Macbook Air 1, with 8 GB RAM and the execution time may differ for different devices. We executed the C++ implementation of ELS on 3 datasets:</p>
 <table>
@@ -433,9 +433,9 @@
 </tr>
 </tbody>
 </table>
-<p>Time taken: 3,410,914 ms (~56.85 minutes)
-Total number of cliques: 37,322,355
-The size of the largest maximal clique: 67</p>
+<p>Time taken: 3,410,914 ms (~56.85 minutes)<br />
+Total number of cliques: 37,322,355<br />
+The size of the largest maximal clique: 67  </p>
 <p><img alt="Clique Size Distribution" src="../as-skitter-res.png" /></p>
 <p>For Email-Enron:</p>
 <table>
@@ -524,9 +524,9 @@ The size of the largest maximal clique: 67</p>
 </tr>
 </tbody>
 </table>
-<p>Time taken: 5991 milliseconds (~6 seconds)
-Number of cliques: 226859
-Size of the largest maximal clique: 20</p>
+<p>Time taken: 5991 milliseconds (~6 seconds)<br />
+Number of cliques: 226859<br />
+Size of the largest maximal clique: 20  </p>
 <p><img alt="Clique Size Distribution" src="../Email-Enron-res.png" /></p>
 <p>For Wiki-Vote:</p>
 <table>
@@ -603,9 +603,9 @@ Size of the largest maximal clique: 20</p>
 </tr>
 </tbody>
 </table>
-<p>Time taken: 6,133 ms (~6.13 seconds)
-Total number of cliques: 459,002
-Size of the largest maximal clique size: 17</p>
+<p>Time taken: 6,133 ms (~6.13 seconds)<br />
+Total number of cliques: 459,002<br />
+Size of the largest maximal clique size: 17  </p>
 <p><img alt="Clique Size Distribution" src="../Wiki-Vote-res.png" /></p></div>
             </div>
         </div>

@@ -84,10 +84,6 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#an-implementation-of-tomita-algorithm" class="nav-link">An Implementation of Tomita Algorithm</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#introduction" class="nav-link">Introduction</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-bs-level="2"><a href="#run-locally" class="nav-link">Run Locally</a>
               <ul class="nav flex-column">
               </ul>
@@ -104,7 +100,6 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="an-implementation-of-tomita-algorithm">An Implementation of Tomita Algorithm</h1>
-<h2 id="introduction">Introduction</h2>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;We seek to implement the maximal clique enumeration algorithm based on Tomita et al.'s approach. The implementation uses C++ to closely mimic the pseudo-code described by Tomita and collaborators, leveraging STL containers and algorithms for efficiency.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;This algorithm is a refined variant of the Bron-Kerbosch recursive method, enhanced with a pivot selection strategy. In this method, three disjoint sets of vertices are maintained:
 - <strong>P</strong>: the set of candidate vertices for inclusion in the clique,
@@ -116,23 +111,20 @@
 - <strong>X</strong> becomes <strong>X ∩ neighbours(v)</strong>.</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;After the recursive call returns, <strong>v</strong> is removed from <strong>P</strong> and added to <strong>X</strong>. An early pruning strategy is also used: if the size of <strong>R</strong> plus the number of vertices in <strong>P</strong> is less than or equal to the size of the largest clique found so far, the recursion stops early, saving computational time.</p>
 <h2 id="run-locally">Run Locally</h2>
-<p>Download the project with the code file</p>
-<pre><code class="language-bash">git clone https://github.com/DarkTalisman20/DAA-Assignment-1.git
-</code></pre>
-<p>Go to the project directory</p>
-<pre><code class="language-bash">cd DAA-Assignment-1
-</code></pre>
-<p>Download the dataset and place it into the project directory/folder.</p>
-<p>Compile the file and run it.</p>
+<ol>
+<li>Ensure that the .txt files of the datasets are in the same folder/directory as the code, and the terminal is also on the same folder/directory.  </li>
+<li>Compile the file and run it.  </li>
+</ol>
 <p>For Unix/Mac:</p>
 <pre><code class="language-bash">  g++ tomita.cpp -o tomita.out
-  ./tomita.out
+  ./tomita.out &lt;dataset&gt;.txt
 </code></pre>
 <p>For Windows:</p>
 <pre><code class="language-bash">  g++ tomita.cpp -o tomita.exe
-  ./tomita.exe
+  ./tomita.exe  &lt;dataset&gt;.txt
 </code></pre>
-<p>Input the file name of the graph dataset in the terminal.</p>
+<p><dataset> can be email-Enron or wiki-Vote or as-skitter.<br />
+3. The output shows the total number of nodes, maximum clique size, number of maximal cliques, their sizes and counts, and the execution time.  </p>
 <h2 id="results">Results</h2>
 <p><em>The following results are based on executing the C++ implementation of the Tomita-based maximal clique algorithm on various datasets. The code was executed on a Macbook Air 1, with 8 GB RAM and the execution time may differ for different devices. The output includes the number of maximal cliques found, the size of the largest clique, and the execution time.</em></p>
 <table>
@@ -161,24 +153,459 @@
 </tr>
 </tbody>
 </table>
-<p><em>Example results for as-skitter:</em></p>
+<p>We present the number and count of Maximal Cliques, Size of maximal clique and time taken to execute for these datasets.</p>
+<p>For as-skitter:</p>
+<table>
+<thead>
+<tr>
+<th>Clique Size</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>2,319,807</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3,171,609</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1,823,321</td>
+</tr>
+<tr>
+<td>5</td>
+<td>939,336</td>
+</tr>
+<tr>
+<td>6</td>
+<td>684,873</td>
+</tr>
+<tr>
+<td>7</td>
+<td>598,284</td>
+</tr>
+<tr>
+<td>8</td>
+<td>588,889</td>
+</tr>
+<tr>
+<td>9</td>
+<td>608,937</td>
+</tr>
+<tr>
+<td>10</td>
+<td>665,661</td>
+</tr>
+<tr>
+<td>11</td>
+<td>728,098</td>
+</tr>
+<tr>
+<td>12</td>
+<td>798,073</td>
+</tr>
+<tr>
+<td>13</td>
+<td>877,282</td>
+</tr>
+<tr>
+<td>14</td>
+<td>945,194</td>
+</tr>
+<tr>
+<td>15</td>
+<td>980,831</td>
+</tr>
+<tr>
+<td>16</td>
+<td>939,987</td>
+</tr>
+<tr>
+<td>17</td>
+<td>839,330</td>
+</tr>
+<tr>
+<td>18</td>
+<td>729,601</td>
+</tr>
+<tr>
+<td>19</td>
+<td>639,413</td>
+</tr>
+<tr>
+<td>20</td>
+<td>600,192</td>
+</tr>
+<tr>
+<td>21</td>
+<td>611,976</td>
+</tr>
+<tr>
+<td>22</td>
+<td>640,890</td>
+</tr>
+<tr>
+<td>23</td>
+<td>673,924</td>
+</tr>
+<tr>
+<td>24</td>
+<td>706,753</td>
+</tr>
+<tr>
+<td>25</td>
+<td>753,633</td>
+</tr>
+<tr>
+<td>26</td>
+<td>818,353</td>
+</tr>
+<tr>
+<td>27</td>
+<td>892,719</td>
+</tr>
+<tr>
+<td>28</td>
+<td>955,212</td>
+</tr>
+<tr>
+<td>29</td>
+<td>999,860</td>
+</tr>
+<tr>
+<td>30</td>
+<td>1,034,106</td>
+</tr>
+<tr>
+<td>31</td>
+<td>1,055,653</td>
+</tr>
+<tr>
+<td>32</td>
+<td>1,017,560</td>
+</tr>
+<tr>
+<td>33</td>
+<td>946,717</td>
+</tr>
+<tr>
+<td>34</td>
+<td>878,552</td>
+</tr>
+<tr>
+<td>35</td>
+<td>809,485</td>
+</tr>
+<tr>
+<td>36</td>
+<td>744,634</td>
+</tr>
+<tr>
+<td>37</td>
+<td>663,650</td>
+</tr>
+<tr>
+<td>38</td>
+<td>583,922</td>
+</tr>
+<tr>
+<td>39</td>
+<td>520,239</td>
+</tr>
+<tr>
+<td>40</td>
+<td>474,301</td>
+</tr>
+<tr>
+<td>41</td>
+<td>420,796</td>
+</tr>
+<tr>
+<td>42</td>
+<td>367,879</td>
+</tr>
+<tr>
+<td>43</td>
+<td>321,829</td>
+</tr>
+<tr>
+<td>44</td>
+<td>275,995</td>
+</tr>
+<tr>
+<td>45</td>
+<td>222,461</td>
+</tr>
+<tr>
+<td>46</td>
+<td>158,352</td>
+</tr>
+<tr>
+<td>47</td>
+<td>99,522</td>
+</tr>
+<tr>
+<td>48</td>
+<td>62,437</td>
+</tr>
+<tr>
+<td>49</td>
+<td>39,822</td>
+</tr>
+<tr>
+<td>50</td>
+<td>30,011</td>
+</tr>
+<tr>
+<td>51</td>
+<td>25,637</td>
+</tr>
+<tr>
+<td>52</td>
+<td>17,707</td>
+</tr>
+<tr>
+<td>53</td>
+<td>9,514</td>
+</tr>
+<tr>
+<td>54</td>
+<td>3,737</td>
+</tr>
+<tr>
+<td>55</td>
+<td>2,042</td>
+</tr>
+<tr>
+<td>56</td>
+<td>1,080</td>
+</tr>
+<tr>
+<td>57</td>
+<td>546</td>
+</tr>
+<tr>
+<td>58</td>
+<td>449</td>
+</tr>
+<tr>
+<td>59</td>
+<td>447</td>
+</tr>
+<tr>
+<td>60</td>
+<td>405</td>
+</tr>
+<tr>
+<td>61</td>
+<td>283</td>
+</tr>
+<tr>
+<td>62</td>
+<td>242</td>
+</tr>
+<tr>
+<td>63</td>
+<td>146</td>
+</tr>
+<tr>
+<td>64</td>
+<td>84</td>
+</tr>
+<tr>
+<td>65</td>
+<td>49</td>
+</tr>
+<tr>
+<td>66</td>
+<td>22</td>
+</tr>
+<tr>
+<td>67</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Time taken</strong>: Approximately 8 hours</li>
+<li><strong>Time taken</strong>: Approximately 8 hours  </li>
 <li><strong>Total number of maximal cliques</strong>: 37,322,355  </li>
 <li><strong>Size of the largest maximal clique</strong>: 67  </li>
 </ul>
 <p><img alt="Clique Size Distribution" src="../as-skitter-res.png" /></p>
-<p><em>Example results for Email-Enron:</em></p>
+<p><em>Example results for Email-Enron:</em>  </p>
+<table>
+<thead>
+<tr>
+<th>Clique Size</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>14,070</td>
+</tr>
+<tr>
+<td>3</td>
+<td>7,077</td>
+</tr>
+<tr>
+<td>4</td>
+<td>13,319</td>
+</tr>
+<tr>
+<td>5</td>
+<td>18,143</td>
+</tr>
+<tr>
+<td>6</td>
+<td>22,715</td>
+</tr>
+<tr>
+<td>7</td>
+<td>25,896</td>
+</tr>
+<tr>
+<td>8</td>
+<td>24,766</td>
+</tr>
+<tr>
+<td>9</td>
+<td>22,884</td>
+</tr>
+<tr>
+<td>10</td>
+<td>21,393</td>
+</tr>
+<tr>
+<td>11</td>
+<td>17,833</td>
+</tr>
+<tr>
+<td>12</td>
+<td>15,181</td>
+</tr>
+<tr>
+<td>13</td>
+<td>11,487</td>
+</tr>
+<tr>
+<td>14</td>
+<td>7,417</td>
+</tr>
+<tr>
+<td>15</td>
+<td>3,157</td>
+</tr>
+<tr>
+<td>16</td>
+<td>1,178</td>
+</tr>
+<tr>
+<td>17</td>
+<td>286</td>
+</tr>
+<tr>
+<td>18</td>
+<td>41</td>
+</tr>
+<tr>
+<td>19</td>
+<td>10</td>
+</tr>
+<tr>
+<td>20</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>Time taken</strong>: 23 seconds  </li>
 <li><strong>Total number of maximal cliques</strong>: 226,859  </li>
 <li><strong>Size of the largest maximal clique</strong>: 20  </li>
 </ul>
 <p><img alt="Clique Size Distribution" src="../Email-Enron-res.png" /></p>
-<p><em>Example results for Wiki-Vote:</em></p>
+<p><em>Example results for Wiki-Vote:</em>  </p>
+<table>
+<thead>
+<tr>
+<th>Clique Size</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>8,655</td>
+</tr>
+<tr>
+<td>3</td>
+<td>13,718</td>
+</tr>
+<tr>
+<td>4</td>
+<td>27,292</td>
+</tr>
+<tr>
+<td>5</td>
+<td>48,416</td>
+</tr>
+<tr>
+<td>6</td>
+<td>68,872</td>
+</tr>
+<tr>
+<td>7</td>
+<td>83,266</td>
+</tr>
+<tr>
+<td>8</td>
+<td>76,732</td>
+</tr>
+<tr>
+<td>9</td>
+<td>54,456</td>
+</tr>
+<tr>
+<td>10</td>
+<td>35,470</td>
+</tr>
+<tr>
+<td>11</td>
+<td>21,736</td>
+</tr>
+<tr>
+<td>12</td>
+<td>11,640</td>
+</tr>
+<tr>
+<td>13</td>
+<td>5,449</td>
+</tr>
+<tr>
+<td>14</td>
+<td>2,329</td>
+</tr>
+<tr>
+<td>15</td>
+<td>740</td>
+</tr>
+<tr>
+<td>16</td>
+<td>208</td>
+</tr>
+<tr>
+<td>17</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Time taken</strong>: 4 seconds</li>
-<li><strong>Total number of maximal cliques</strong>: 459,002  </li>
+<li><strong>Time taken</strong>: 4 seconds  </li>
+<li><strong>Total number of maximal cliques</strong>: 459,002    </li>
 <li><strong>Size of the largest maximal clique</strong>: 17  </li>
 </ul>
 <p><img alt="Clique Size Distribution" src="../Wiki-Vote-res.png" />
