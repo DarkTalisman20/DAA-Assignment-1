@@ -31,9 +31,7 @@
 
 4. Go to the project directory
 
-5. Download the dataset and place it into the project directory/folder.
-
-6. Compile the file and run it.
+5. Compile the file and run it.
 
 For Unix/Mac:
 
@@ -56,5 +54,5 @@ Example for ELS with Wiki-Vote we input:
 ```
 
 file-name can be tomita, or els, or chiba.  
-
+dataset can be wiki-Vote or as-skitter or email-Enron.
 &nbsp;&nbsp;&nbsp;&nbsp; Webpage Link: [https://darktalisman20.github.io/DAA-Assignment-1/](https://darktalisman20.github.io/DAA-Assignment-1/)  
