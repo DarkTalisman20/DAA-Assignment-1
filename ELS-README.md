@@ -117,9 +117,9 @@ For as-skitter:
 | 67         | 4         |
 
 
-Time taken: 3,410,914 ms (~56.85 minutes)
-Total number of cliques: 37,322,355
-The size of the largest maximal clique: 67
+Time taken: 3,410,914 ms (~56.85 minutes)  
+Total number of cliques: 37,322,355  
+The size of the largest maximal clique: 67  
 
 ![Clique Size Distribution](as-skitter-res.png)
 
@@ -147,9 +147,9 @@ For Email-Enron:
 | 19         | 10     |
 | 20         | 6      |
 
-Time taken: 5991 milliseconds (~6 seconds)
-Number of cliques: 226859
-Size of the largest maximal clique: 20
+Time taken: 5991 milliseconds (~6 seconds)  
+Number of cliques: 226859  
+Size of the largest maximal clique: 20  
 
 ![Clique Size Distribution](Email-Enron-res.png)
 
@@ -175,8 +175,8 @@ For Wiki-Vote:
 | 16         | 208    |
 | 17         | 23     |
 
-Time taken: 6,133 ms (~6.13 seconds)
-Total number of cliques: 459,002
-Size of the largest maximal clique size: 17
+Time taken: 6,133 ms (~6.13 seconds)  
+Total number of cliques: 459,002  
+Size of the largest maximal clique size: 17  
 
 ![Clique Size Distribution](Wiki-Vote-res.png)
