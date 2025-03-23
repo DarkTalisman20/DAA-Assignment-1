@@ -42,7 +42,7 @@ Input the file name of the graph dataset in the terminal.
 
 
 ## Results
-&nbsp;&nbsp;&nbsp;&nbsp;We executed the C++ implementation of ELS with 3 datasets:
+&nbsp;&nbsp;&nbsp;&nbsp;The code was executed on a Macbook Air 1, with 8 GB RAM and the execution time may differ for different devices. We executed the C++ implementation of ELS on 3 datasets:
 
 | Dataset        | Nodes   | Edges   |
 |---------------|---------|------------|
