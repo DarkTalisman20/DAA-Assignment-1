@@ -183,7 +183,7 @@ For Wiki-Vote:
 | 16         | 208    |
 | 17         | 23     |
 
-Time taken: 6026020 ms (~1.6 hours)
+Time taken: 3441290 ms (~57.35 seconds)
 Total number of cliques: 459,002
 Size of the largest maximal clique size: 17
 
