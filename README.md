@@ -52,5 +52,5 @@ Example for ELS with Wiki-Vote we input:
 ```
 
 file-name can be tomita, or els, or chiba.  
-dataset can be wiki-Vote or as-skitter or email-Enron.
+dataset can be wiki-Vote or as-skitter or email-Enron.  
 &nbsp;&nbsp;&nbsp;&nbsp; Webpage Link: [https://darktalisman20.github.io/DAA-Assignment-1/](https://darktalisman20.github.io/DAA-Assignment-1/)  
