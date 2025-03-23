@@ -29,9 +29,9 @@ For Windows:
 dataset can be wiki-Vote or as-skitter or email-Enron.  
 3. After the program executes properly you will get the following outputs on the terminal - 
 "code execution completed!
-results are available in output-chiba.txt of the same directory"
-4. Check the output-chiba.txt file to see the results of the execution.
-Note - For seeing results of next execution, please close and open the output-chiba.txt file again
+results are available in output-chiba.txt of the same directory"  
+4. Check the output-chiba.txt file to see the results of the execution.  
+Note - For seeing results of next execution, please close and open the output-chiba.txt file again.  
 
 
 ## Results
