@@ -29,38 +29,32 @@
 2. Download the dataset zip folder from the google drive link. (Link: [https://drive.google.com/drive/folders/16u1PDHzcSc9NJv8H8-DymsLPtUoBTNyt?usp=sharing](https://drive.google.com/drive/folders/16u1PDHzcSc9NJv8H8-DymsLPtUoBTNyt?usp=sharing)).  
 3. Extract the dataset .txt files from the zip folder and put them in the same folder where all the codes are.  
 
-Go to the project directory
+4. Go to the project directory
 
-```bash
-  cd DAA-Assignment-1
-```
+5. Download the dataset and place it into the project directory/folder.
 
-Download the dataset and place it into the project directory/folder.
-
-Compile the file and run it.
+6. Compile the file and run it.
 
 For Unix/Mac:
 
 ```bash
   g++ <file-name>.cpp -o <file-name>.out
-  ./<file-name>.out
+  ./<file-name>.out <dataset>.txt
 ```
 
 For Windows:
 
 ```bash
   g++ .cpp -o <file-name>.exe
-  ./<file-name>.exe
+  ./<file-name>.exe <dataset>.txt
 ```
 
-For any operating system, after running the executable file, input the dataset-name.  
-Example for Wiki-Vote we input:  
+Example for ELS with Wiki-Vote we input:  
 ```bash
-  Wiki-Vote.txt
+  g++ els.cpp -o els.exe
+  ./els.exe Wiki-Vote.txt
 ```
-Input the file name of the graph dataset in the terminal.
 
-file-name can be Tomita, or ELS, or Chiba.  
+file-name can be tomita, or els, or chiba.  
 
 &nbsp;&nbsp;&nbsp;&nbsp; Webpage Link: [https://darktalisman20.github.io/DAA-Assignment-1/](https://darktalisman20.github.io/DAA-Assignment-1/)  
-&nbsp;&nbsp;&nbsp;&nbsp; Github page: [https://github.com/DarkTalisman20/DAA-Assignment-1](https://github.com/DarkTalisman20/DAA-Assignment-1)
