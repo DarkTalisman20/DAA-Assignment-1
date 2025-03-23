@@ -34,15 +34,15 @@ Compile the file and run it.
 For Unix/Mac:
 
 ```bash
-  g++ Tomita.cpp -o Tomita.out
-  ./Tomita.out
+  g++ tomita.cpp -o tomita.out
+  ./tomita.out
 ```
 
 For Windows:
 
 ```bash
-  g++ Tomita.cpp -o Tomita.exe
-  ./Tomita.exe
+  g++ tomita.cpp -o tomita.exe
+  ./tomita.exe
 ```
 
 Input the file name of the graph dataset in the terminal.
