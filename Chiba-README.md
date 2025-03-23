@@ -74,9 +74,9 @@ For Email-Enron:
 | 19         | 10     |
 | 20         | 6      |
 
-Time taken: 7082330 ms (~1.9 hours)
-Number of cliques: 226859
-Size of the largest maximal clique: 20
+Time taken: 7082330 ms (~1.9 hours)  
+Number of cliques: 226859  
+Size of the largest maximal clique: 20  
 
 ![Clique Size Distribution](Email-Enron-res.png)
 
@@ -102,8 +102,8 @@ For Wiki-Vote:
 | 16         | 208    |
 | 17         | 23     |
 
-Time taken: 3441290 ms (~57.35 seconds)
-Total number of cliques: 459,002
-Size of the largest maximal clique size: 17
+Time taken: 3441290 ms (~57.35 seconds)  
+Total number of cliques: 459,002  
+Size of the largest maximal clique size: 17  
 
 ![Clique Size Distribution](Wiki-Vote-res.png)
