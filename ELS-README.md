@@ -26,15 +26,15 @@ Compile the file and run it.
 For Unix/Mac:
 
 ```bash
-  g++ ELS.cpp -o ELS.out
-  ./ELS.out
+  g++ els.cpp -o els.out
+  ./els.out
 ```
 
 For Windows:
 
 ```bash
-  g++ ELS.cpp -o ELS.exe
-  ./ELS.exe
+  g++ els.cpp -o els.exe
+  ./els.exe
 ```
 
 Input the file name of the graph dataset in the terminal.
