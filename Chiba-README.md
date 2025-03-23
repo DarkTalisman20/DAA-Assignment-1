@@ -7,11 +7,7 @@
 
 ## Run Locally
 
-Download the project with the code file
-
-```bash
-  git clone https://github.com/DarkTalisman20/DAA-Assignment-1.git
-```
+Download the project with the code file from the submission.
 
 Go to the project directory
 
@@ -27,19 +23,15 @@ For Unix/Mac:
 
 ```bash
   g++ chiba.cpp -o chiba.out
-  ./chiba.out
+  ./chiba.out <file-name>.txt
 ```
 
 For Windows:
 
 ```bash
   g++ chiba.cpp -o chiba.exe
-  ./chiba.exe
+  ./chiba.exe <file-name>.txt
 ```
-
-Input the file name of the graph dataset in the terminal.
-
-
 
 ## Results
 &nbsp;&nbsp;&nbsp;&nbsp;The code was executed on a Macbook Air 1, with 8 GB RAM and the execution time may differ for different devices. We executed the C++ implementation of ELS with 3 datasets:
