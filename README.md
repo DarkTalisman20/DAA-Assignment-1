@@ -28,10 +28,8 @@
 1.Download the zip file with codes from the submission.  
 2. Download the dataset zip folder from the google drive link. (Link: [https://drive.google.com/drive/folders/16u1PDHzcSc9NJv8H8-DymsLPtUoBTNyt?usp=sharing](https://drive.google.com/drive/folders/16u1PDHzcSc9NJv8H8-DymsLPtUoBTNyt?usp=sharing)).  
 3. Extract the dataset .txt files from the zip folder and put them in the same folder where all the codes are.  
-
-4. Go to the project directory
-
-5. Compile the file and run it.
+4. Go to the project directory.  
+5. Compile the file and run it.  
 
 For Unix/Mac:
 
