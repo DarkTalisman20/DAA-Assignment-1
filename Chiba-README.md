@@ -53,7 +53,10 @@ Input the file name of the graph dataset in the terminal.
 
 We present the number and count of Maximal Cliques, Size of maximal clique and time taken to execute for these datasets.
 
+For as-skitter:
+
 &nbsp;&nbsp;&nbsp;&nbsp;Since the algorithm took approximately 3.8 hours on Email-Enron and 57.35 minutes on Wiki-Vote, we estimate that it would take at least 50 hours on the as-skitter dataset, which contains 1,696,415 nodes and 11,095,298 edges. However, due to system constraints, we were unable to run the algorithm on as-skitter. Additionally, based on other algorithms, as-skitter has 37,322,355 cliques, with the largest maximal clique having a size of 67, which again shows that it would takes a lot of computational cost to give the output.  
+
 For Email-Enron:
 
 | Clique Size | Count  |
